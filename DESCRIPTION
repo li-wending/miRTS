@@ -1,6 +1,6 @@
 Package: miRTS
 Title: miRNA-based Tissue Signal (miR-TS) scores
-Version: 0.0.1
+Version: 0.0.9
 Authors@R: 
     person("Wending", "Li", , "wdli.wending@gmail.com", role = c("aut", "cre"))
 Description: Compute miRNA-based Tissue Signal (miR-TS) scores from extracellular miRNAs in circulation.

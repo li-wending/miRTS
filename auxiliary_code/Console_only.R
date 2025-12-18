@@ -41,3 +41,19 @@ devtools::check()
 
 devtools::build_vignettes()
 
+# Windows (CRAN-required-ish sanity):
+devtools::check_win_devel()
+
+# Initialize git + GitHub repo:
+usethis::use_git() # need to commit
+usethis::use_github()
+
+# Add GitHub Actions CI for 'R CMD check' on major OSes (good CRAN prep):
+usethis::use_github_action_check_standard()
+
+
+# Submit to CRAN
+#
+# Use the “release” helper (it walks you through common CRAN checks):
+  # Or manually: build tar.gz, then submit via CRAN web form.
+  devtools::release()
