@@ -26,3 +26,5 @@ Depends:
     R (>= 3.5)
 LazyData: true
 Config/build/clean-inst-doc: FALSE
+URL: https://github.com/li-wending/miRTS
+BugReports: https://github.com/li-wending/miRTS/issues
