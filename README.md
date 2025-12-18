@@ -5,7 +5,7 @@ The **`miRTS`** package is designed to infer biological signals originating from
 
 The main function, ***`miRTS_score()`***, estimates *miR-TS (miRNA-based Tissue Signal) scores* from bulk extracellular miRNA expression profiles. For each individual, the function returns a tissue-specific score for each modeled tissue type.
 
-*miR-TS score* has been demonstrated to reflect tissue-specific health and disease status across different tissue types in three population cohorts and 11 external validation datasets. The CIBERSORT (default) deconvolution method is recommended for optimal performance.
+*miR-TS score* has been tested to reflect tissue-specific health and disease status across different tissue types in three population cohorts and 11 external validation datasets. The CIBERSORT (default) deconvolution method is recommended for optimal performance.
 
 ## Quick start
 ```{r setup}
