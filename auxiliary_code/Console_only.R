@@ -46,8 +46,13 @@ devtools::check_win_devel()
 
 # Initialize git + GitHub repo:
 usethis::use_git() # need to commit
+gitcreds::gitcreds_set()
+# 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
 usethis::use_github()
-
+usethis::use_git_config(
+  user.name  = "li-wending",
+  user.email = "wdli.wending@gmail.com"
+)
 # Add GitHub Actions CI for 'R CMD check' on major OSes (good CRAN prep):
 usethis::use_github_action_check_standard()
 
