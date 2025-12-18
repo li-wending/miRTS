@@ -13,10 +13,13 @@ The main function, ***`miRTS_score()`***, estimates *miR-TS (miRNA-based Tissue 
 remotes::install_github("li-wending/miRTS", build_vignettes = TRUE)
 
 # Alternatively, download the latest .tar.gz from the GitHub Releases page and install:
-# install.packages("path/to/miRTS_0.0.9.tar.gz", repos = NULL, type = "source")
+# install.packages("C:/path/to/miRTS_0.0.9.tar.gz", repos = NULL, type = "source")
 
 library(miRTS)
-# miRTS_score(Input_df = example_counts)
+# vignette(topic = "Intro_to_miRTS", package = "miRTS")
+# ?miRTS_score
+# ?CIBERSORT_download
+# miR_TS.output <- miRTS_score(Input_df = example_counts)
 ```
 ### Input & Output
 
@@ -32,11 +35,12 @@ Note that in the `example_counts` data, the original dataset was in log2 scale, 
 
 ### Construct miR-TS scores
 ```{r hepatitisC-deconvolute}
-stopifnot(
-  requireNamespace("ggplot2", quietly = TRUE),
-  requireNamespace("dplyr", quietly = TRUE),
-  requireNamespace("reshape", quietly = TRUE)
-)
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  stop("This vignette requires ggplot2. Please install it to build the vignette.")
+}
+if (!requireNamespace("scales", quietly = TRUE)) {
+  stop("This vignette requires scales Please install it to build the vignette.")
+}
 
 data(example_counts)
 data(miRTS_signature_v1)
@@ -44,7 +48,7 @@ data(miRTS_signature_v1)
 # Deconvolute miRNA expression data to obtain miR-TS scores.
 # CIBERSORT is essential for optimal miR-TS performance (see below):
 #
-# source('C:/Users/wl2957/CIBERSORT.R')
+# source('C:/path/to/CIBERSORT.R') # path to your downloaded file
 
 # miR_TS.output <- miRTS_score(
 #   Input_df = example_counts,
@@ -54,7 +58,7 @@ data(miRTS_signature_v1)
 # all.equal(miR_TS.output , miR_TS.output.bkup)
 
 # Without obtaining the CIBERSORT script,
-#  user can alternatively use the saved miR_TS.output object built-in with the package:
+#  user can alternatively use the saved miR_TS.output.bkup object built-in with the package:
 #
 miR_TS.output <- miR_TS.output.bkup
 
