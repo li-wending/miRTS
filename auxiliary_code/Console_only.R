@@ -46,6 +46,9 @@ devtools::check_win_devel()
 
 # Initialize git + GitHub repo:
 usethis::use_git() # need to commit
+
+# use Github:
+
 gitcreds::gitcreds_set()
 # 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
 usethis::use_github()
