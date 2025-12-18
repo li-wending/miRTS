@@ -1,5 +1,4 @@
 .Rproj.user
-inst/doc
 /doc/
 /Meta/
 .Rhistory
@@ -7,4 +6,4 @@ inst/doc
 .httr-oauth
 .DS_Store
 .quarto
-/auxiliary_code/
+auxiliary_code/
