@@ -6,5 +6,6 @@
 ^CIBERSORT-Results.txt$
 ^vignettes/CIBERSORT-Results.txt$
 ^inst/doc/Rplots\.pdf$
-
+^Cred.txt$
+^Cred.txt.pub$
 ^LICENSE\.md$

@@ -53,7 +53,7 @@ The authors provided "counts" data in log2-transformed, normalized format:
 The code to re-generate the example_counts from published data:
 \preformatted{
 GSE74872 <- read.csv("./Example_data/GSE74872.csv", header = TRUE)
-GSE74872.name <- read.table("./Example_data/GPL19117-74051.txt", sep = "\t")
+GSE74872.name <- read.table("./Example_data/GPL19117-74051_abridged.txt", sep = "\t")
 library(dplyr)
 GSE74872.name <- GSE74872.name %>% select(V1, V4)
 GSE74872 <- GSE74872 %>%
