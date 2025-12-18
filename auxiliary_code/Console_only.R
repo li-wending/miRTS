@@ -49,6 +49,17 @@ usethis::use_git() # need to commit
 
 # use Github:
 
+# in Terminal:
+  git remote -v
+  git remote add origin git@github.com:li-wending/miRTS.git
+  git add .
+  git commit -m "Initial commit"
+  git push -u origin main
+  git status
+  git add .
+  git commit -m "Initial package version"
+
+
 gitcreds::gitcreds_set()
 # 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
 usethis::use_github()
