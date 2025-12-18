@@ -1,0 +1,10 @@
+^miRTS\.Rproj$
+^\.Rproj\.user$
+^auxiliary_code$
+^doc$
+^Meta$
+^CIBERSORT-Results.txt$
+^vignettes/CIBERSORT-Results.txt$
+^inst/doc/Rplots\.pdf$
+
+^LICENSE\.md$

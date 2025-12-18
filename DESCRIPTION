@@ -1,0 +1,28 @@
+Package: miRTS
+Title: miRNA-based Tissue Signal (miR-TS) scores
+Version: 0.0.1
+Authors@R: 
+    person("Wending", "Li", , "wdli.wending@gmail.com", role = c("aut", "cre"))
+Description: Compute miRNA-based Tissue Signal (miR-TS) scores from extracellular miRNAs in circulation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+    edgeR,
+    dplyr,
+    magrittr
+Suggests: 
+    xCell2,
+    e1071,
+    parallel,
+    preprocessCore,
+    Matrix,
+    matrixStats,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Config/build/clean-inst-doc: FALSE
