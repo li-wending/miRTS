@@ -15,7 +15,7 @@ enriched (e.g., \code{"liver"}, \code{"heart"}, etc.).}
 }
 \source{
 Curated tissue-specific miRNA list distributed with the package
-(file: \verb{Signature_matrix/tissue-specific miRNAs.csv}).
+(file: \code{Signature_matrix/tissue_specific_miRNAs.csv}).
 }
 \usage{
 ts_miRNA
