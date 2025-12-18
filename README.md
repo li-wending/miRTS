@@ -18,7 +18,7 @@ remotes::install_github("li-wending/miRTS", build_vignettes = TRUE)
 library(miRTS)
 # vignette(topic = "Intro_to_miRTS", package = "miRTS")
 # ?miRTS_score
-# ?CIBERSORT_download
+# CIBERSORT_download
 # miR_TS.output <- miRTS_score(Input_df = example_counts)
 ```
 ### Input & Output
