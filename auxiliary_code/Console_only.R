@@ -61,7 +61,7 @@ usethis::use_git() # need to commit
 
 
 gitcreds::gitcreds_set()
-# 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
+# find my credential in the old tests file
 usethis::use_github()
 usethis::use_git_config(
   user.name  = "li-wending",
