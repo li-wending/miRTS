@@ -9,6 +9,6 @@
 #' @export
 
 CIBERSORT_download <- function(){
-  print("Please download 'CIBERSORT.R' from https://cibersortx.stanford.edu/ and execute the file to obtain the 'CIBERSORT()' functionality!")
+  print("Please download 'CIBERSORT.R' from https://cibersortx.stanford.edu/ , navigate 'Menu -> CS Archive -> CS Download -> Download CIBERSORT source code', and execute the file to obtain the 'CIBERSORT()' functionality!")
   utils::browseURL("https://cibersortx.stanford.edu/")
 }
