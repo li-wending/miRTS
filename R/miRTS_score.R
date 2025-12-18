@@ -224,7 +224,7 @@ miRTS_score <- function(
 
   # Deconvolution:####
   if (method == "cibersort"){
-    if (!exists("CIBERSORT")) stop("CIBERSORT function not detected! Run: source('CIBERSORT.R')")
+    if (!exists("CIBERSORT")) stop("CIBERSORT function not detected! Run: 1) ?CIBERSORT_download to get CIBERSORT.R, then 2) source('CIBERSORT.R')")
     X <- X[order(rownames(X)),,drop=FALSE]
     Y <- Y[order(rownames(Y)),,drop=FALSE]
 
