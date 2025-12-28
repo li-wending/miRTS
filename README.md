@@ -13,12 +13,12 @@ The main function, ***`miRTS_score()`***, estimates *miR-TS (miRNA-based Tissue 
 remotes::install_github("li-wending/miRTS", build_vignettes = TRUE)
 
 # Alternatively, download the latest .tar.gz from the GitHub Releases page and install:
-# install.packages("C:/path/to/miRTS_0.0.9.tar.gz", repos = NULL, type = "source")
+# install.packages("C:/path/to/miRTS_1.0.0.tar.gz", repos = NULL, type = "source")
 
 library(miRTS)
 # vignette(topic = "Intro_to_miRTS", package = "miRTS")
 # ?miRTS_score
-# ?CIBERSORT_download
+# CIBERSORT_download()
 # miR_TS.output <- miRTS_score(Input_df = example_counts)
 ```
 ### Input & Output
@@ -55,7 +55,7 @@ data(miRTS_signature_v1)
 #   signature_matrix = miRTS_signature_v1,
 #   method = "cibersort"  #"cibersort", "xCell2", "MCP-counter"
 # )
-# all.equal(miR_TS.output , miR_TS.output.bkup)
+# all.equal(miR_TS.output, miR_TS.output.bkup)
 
 # Without obtaining the CIBERSORT script,
 #  user can alternatively use the saved miR_TS.output.bkup object built-in with the package:
@@ -72,15 +72,14 @@ miR_TS.output <- miR_TS.output.bkup
 #  (3) scaled signature matrix (the `signature_matrix`)
 str(miR_TS.output)
 
+plt_df <- stack(as.data.frame(miR_TS.output$proportions)) 
+names(plt_df) <- c("value", "tissue")
+
 library(ggplot2)
-plt_df <- as.data.frame(miR_TS.output$proportions)
-if ("Correlation" %in% colnames(plt_df)){plt_df <- dplyr::select(plt_df, -"P-value",-"Correlation",-"RMSE") }
-plt_df <- reshape::melt(plt_df, variable_name = "tissue")
 ggplot(plt_df) + aes(tissue, value) + geom_boxplot() +
   xlab("") + ylab("score") +
   scale_y_continuous(trans=scales::pseudo_log_trans(base = 2),n.breaks = 5) +
   theme(axis.text.x = element_text(angle = 45,size = 12, hjust=1))
-
 ```
 
 ### Plot liver scores by disease group
@@ -102,7 +101,6 @@ ggplot(hepatitis_C.output) + aes(sample_type, liver) + geom_boxplot() +
   xlab("") + ylab("Liver score") +
   scale_y_continuous(trans=scales::pseudo_log_trans(base = 2), n.breaks = 5) +
   theme(axis.text = element_text(size = 12))
-
 ```
 
 ## Other Demo Data
