@@ -41,10 +41,10 @@ Note that in the `example_counts` data, the original dataset was in log2 scale, 
 ### Construct miR-TS scores
 ```{r hepatitisC-deconvolute}
 if (!requireNamespace("ggplot2", quietly = TRUE)) {
-  stop("This vignette requires ggplot2. Please install it to build the vignette.")
+  stop("This vignette requires ggplot2. Please run 'install.packages('ggplot2')' to install it.")
 }
 if (!requireNamespace("scales", quietly = TRUE)) {
-  stop("This vignette requires scales. Please install it to build the vignette.")
+  stop("This vignette requires scales. Please run 'install.packages('scales')' to install it.")
 }
 
 data(example_counts)
