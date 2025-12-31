@@ -19,6 +19,11 @@ library(miRTS)
 # vignette(topic = "Intro_to_miRTS", package = "miRTS") # available only when vignettes was built
 # ?miRTS_score
 # CIBERSORT_download()
+# if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager")
+# BiocManager::install("edgeR")
+# BiocManager::install("preprocessCore")
+# install.packages('e1071')
+# install.packages('parallel')
 # miR_TS.output <- miRTS_score(Input_df = example_counts)
 ```
 ### Input & Output
@@ -28,7 +33,7 @@ library(miRTS)
 
 ## Example: Hepatitis C dataset
 
-This example demonstrates how to compute *miR-TS scores* using an included example expression matrix and visualizes liver-associated scores by hepatitis C disease status. The original data are publicly available from GEO under accession [GSE74872](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE74872).
+This example demonstrates how to compute *miR-TS scores* using an included example expression matrix and visualizes liver miR-TS scores by hepatitis C disease status. The original data are publicly available from GEO under accession [GSE74872](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE74872).
 
 All example outputs shown here are generated using data and reference signatures bundled with the package.
 Note that in the `example_counts` data, the original dataset was in log2 scale, and has thus been transformed back to linear scale for compatibility with the default count input (see `?example_counts` for details).
@@ -39,7 +44,7 @@ if (!requireNamespace("ggplot2", quietly = TRUE)) {
   stop("This vignette requires ggplot2. Please install it to build the vignette.")
 }
 if (!requireNamespace("scales", quietly = TRUE)) {
-  stop("This vignette requires scales Please install it to build the vignette.")
+  stop("This vignette requires scales. Please install it to build the vignette.")
 }
 
 data(example_counts)
