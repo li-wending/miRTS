@@ -10,13 +10,13 @@ The main function, ***`miRTS_score()`***, estimates *miR-TS (miRNA-based Tissue 
 ## Quick start
 ```{r setup}
 # install.packages("remotes")
-remotes::install_github("li-wending/miRTS", build_vignettes = TRUE)
+remotes::install_github("li-wending/miRTS") # , build_vignettes = TRUE
 
 # Alternatively, download the latest .tar.gz from the GitHub Releases page and install:
 # install.packages("C:/path/to/miRTS_1.0.0.tar.gz", repos = NULL, type = "source")
 
 library(miRTS)
-# vignette(topic = "Intro_to_miRTS", package = "miRTS")
+# vignette(topic = "Intro_to_miRTS", package = "miRTS") # available only when vignettes was built
 # ?miRTS_score
 # CIBERSORT_download()
 # miR_TS.output <- miRTS_score(Input_df = example_counts)
