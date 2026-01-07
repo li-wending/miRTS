@@ -10,16 +10,21 @@ The main function, ***`miRTS_score()`***, estimates *miR-TS (miRNA-based Tissue 
 ## Quick start
 ```{r setup}
 # install.packages("remotes")
-remotes::install_github("li-wending/miRTS", build_vignettes = TRUE)
+remotes::install_github("li-wending/miRTS") # , build_vignettes = TRUE
 
 # Alternatively, download the latest .tar.gz from the GitHub Releases page and install:
 # install.packages("C:/path/to/miRTS_1.0.0.tar.gz", repos = NULL, type = "source")
 
 library(miRTS)
-# vignette(topic = "Intro_to_miRTS", package = "miRTS")
+# vignette(topic = "Intro_to_miRTS", package = "miRTS") # available only when vignettes was built
 # ?miRTS_score
 # CIBERSORT_download()
-# miR_TS.output <- miRTS_score(Input_df = example_counts)
+# if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager")
+# BiocManager::install("edgeR")
+# BiocManager::install("preprocessCore")
+# install.packages('e1071')
+# install.packages('parallel')
+# miR_TS.output <- miRTS_score(Input_df = example_counts) # miRNAs on the rows (e.g., 'hsa-miR-1-3p') and samples on the columns
 ```
 ### Input & Output
 
@@ -28,7 +33,7 @@ library(miRTS)
 
 ## Example: Hepatitis C dataset
 
-This example demonstrates how to compute *miR-TS scores* using an included example expression matrix and visualizes liver-associated scores by hepatitis C disease status. The original data are publicly available from GEO under accession [GSE74872](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE74872).
+This example demonstrates how to compute *miR-TS scores* using an included example expression matrix and visualizes liver miR-TS scores by hepatitis C disease status. The original data are publicly available from GEO under accession [GSE74872](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE74872).
 
 All example outputs shown here are generated using data and reference signatures bundled with the package.
 Note that in the `example_counts` data, the original dataset was in log2 scale, and has thus been transformed back to linear scale for compatibility with the default count input (see `?example_counts` for details).
@@ -36,10 +41,10 @@ Note that in the `example_counts` data, the original dataset was in log2 scale, 
 ### Construct miR-TS scores
 ```{r hepatitisC-deconvolute}
 if (!requireNamespace("ggplot2", quietly = TRUE)) {
-  stop("This vignette requires ggplot2. Please install it to build the vignette.")
+  stop("This vignette requires ggplot2. Please run 'install.packages('ggplot2')' to install it.")
 }
 if (!requireNamespace("scales", quietly = TRUE)) {
-  stop("This vignette requires scales Please install it to build the vignette.")
+  stop("This vignette requires scales. Please run 'install.packages('scales')' to install it.")
 }
 
 data(example_counts)
