@@ -180,7 +180,15 @@ miRTS_score <- function(
   Norm <- match.arg(Norm)
   #Sanity check:
   ## Consistent miRNA naming on the row:
+  if (any(grepl("miR", colnames(example_counts.2)))) {
+    print("transposing the Input_df so that miRNAs are on the rows...")
+    Input_df <- as.data.frame(t(Input_df))
+  }
   rownames(Input_df) <- gsub("_","-",rownames(Input_df))
+  if (any(!grepl("hsa", rownames(Input_df)) & grepl("miR", rownames(Input_df)))){
+    rownames(Input_df) <- paste0("hsa-",rownames(Input_df))
+
+  }
   if (!all(grepl("miR-|let-", rownames(Input_df)))) {
     stop("Error: all row names must be miRNA names (e.g., hsa-miR-1-3p)!")
   }
