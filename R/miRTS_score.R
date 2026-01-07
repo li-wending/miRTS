@@ -180,7 +180,7 @@ miRTS_score <- function(
   Norm <- match.arg(Norm)
   #Sanity check:
   ## Consistent miRNA naming on the row:
-  if (any(grepl("miR", colnames(example_counts.2)))) {
+  if (any(grepl("miR", colnames(example_counts)))) {
     print("transposing the Input_df so that miRNAs are on the rows...")
     Input_df <- as.data.frame(t(Input_df))
   }
