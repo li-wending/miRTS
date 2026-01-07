@@ -24,7 +24,7 @@ library(miRTS)
 # BiocManager::install("preprocessCore")
 # install.packages('e1071')
 # install.packages('parallel')
-# miR_TS.output <- miRTS_score(Input_df = example_counts)
+# miR_TS.output <- miRTS_score(Input_df = example_counts) # miRNAs on the rows (e.g., 'hsa-miR-1-3p') and samples on the columns
 ```
 ### Input & Output
 
