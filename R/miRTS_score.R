@@ -216,10 +216,16 @@ miRTS_score <- function(
   keep <- which(Matrix::rowSums(Input_df > 0) >= round( Dtct_cutoff * ncol(Input_df)))
   Input_df = Input_df[keep,]
 
-  # Normalize the input data with TMM or alternatives; this will NOT affect the miR-TS output.
-  dge <- edgeR::DGEList(counts=as.matrix(Input_df))
-  dge <- edgeR::calcNormFactors(dge, method = Norm)
-  Y <- edgeR::cpm(dge)
+  # Normalize the input data with TMM or alternatives; this will have little effect on the miR-TS output.
+  if (Norm == "none"){
+    Y <- Input_df
+    print("not normalizing Input_df!")
+  } else{
+    dge <- edgeR::DGEList(counts = as.matrix(Input_df))
+    dge <- edgeR::calcNormFactors(dge, method = Norm)
+    Y <- edgeR::cpm(dge)
+
+  }
 
   # check % of miRNAs overlapping with signature matrix:
 
