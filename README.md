@@ -112,19 +112,19 @@ ggplot(hepatitis_C.output) + aes(sample_type, liver) + geom_boxplot() +
 
 In addition to the above example, miR-TS scores were tested across the following tissue types and health conditions using publicly available datasets:
 
-| Tissue     | Condition                             | GEO Accession |
-|------------|----------------------------------------|---------------|
-| Adipocyte  | Adipose inflammation                   | [GSE240273](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240273) |
-| Bone       | Osteoporosis                           | [GSE201543](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE201543) |
-| Bowel      | Ulcerative colitis                     | [GSE32273](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32273)   |
-| Brain      | Traumatic brain injuries               | [GSE131695](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131695) |
-| Heart      | Fulminant myocarditis                  | [GSE148153](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148153) |
-| Kidney     | T2D + diabetic kidney disease          | [GSE262414](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262414) |
-| Liver      | Acetaminophen overdose                 | [GSE59565](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59565)   |
-| Liver      | Liver allograft rejection              | [GSE69579](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE69579)   |
-| Lung       | COVID-19                               | [GSE178246](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178246) |
-| Skin       | Medicamentosa-like dermatitis          | [GSE247297](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE247297) |
-
+| No | Tissue     | Condition                                  | GEO Accession | N  | Platform        |
+|----|------------|---------------------------------------------|---------------|----|-----------------|
+| 1  | Adipocyte  | Adipose inflammation                        | [GSE240273](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240273) | 34 | RNA-seq (NS500) |
+| 2  | Bone       | Osteoporosis                                | [GSE201543](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE201543) | 10 | Agilent miRNA   |
+| 3  | Bowel      | Ulcerative colitis                          | [GSE32273](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32273)   | 43 | Affy miRNA      |
+| 4  | Brain      | Traumatic brain injuries                    | [GSE131695](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131695) | 45 | RNA-seq (NS550) |
+| 5  | Heart      | Fulminant myocarditis                       | [GSE148153](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148153) | 23 | Agilent miRNA   |
+| 6  | Kidney     | Diabetic kidney disease          | [GSE262414](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262414) | 31 | RNA-seq (NS500) |
+| 7  | Liver      | Acetaminophen overdose                      | [GSE59565](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59565)   | 24 | RNA-seq (HiSeq) |
+| 8  | Liver      | Hepatitis C                                 | [GSE74872](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE74872)   | 48 | Affy miRNA      |
+| 9  | Liver      | Liver allograft rejection                   | [GSE69579](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE69579)   | 29 | RNA-seq (HiSeq) |
+| 10 | Lung       | COVID-19                                    | [GSE178246](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178246) | 77 | RNA-seq (NS500) |
+| 11 | Skin       | Medicamentosa-like dermatitis               | [GSE247297](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE247297) | 15 | Agilent miRNA   |
 
 
 ## Note: CIBERSORT prerequisite
