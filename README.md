@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1118645417.svg)](https://doi.org/10.5281/zenodo.19446482)
 # Introduction to miRTS
 
 ## Overview
