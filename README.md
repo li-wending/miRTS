@@ -136,9 +136,9 @@ CIBERSORT is licensed but free of charge for non-commercial use only.
 Following registration, the **CIBERSORT.R** file is available via the
 [cibersort website](https://cibersortx.stanford.edu/).
 
-## Reference
+## References
 Matsuura, Kentaro et al. “Circulating let-7 levels in plasma and extracellular vesicles correlate with hepatic fibrosis progression in chronic hepatitis C.” Hepatology (Baltimore, Md.) vol. 64,3 (2016): 732-45. doi:10.1002/hep.28660
 
 Keller, Andreas et al., “miRNATissueAtlas2: an update to the human miRNA tissue atlas.” Nucleic acids research vol. 50,D1 (2022): D211-D221. doi:10.1093/nar/gkab808
 
-Li et al., "Circulating extracellular microRNAs as tissue-specific biomarkers of human health and disease" (in revision).
+Li, Wending et al., "Circulating extracellular microRNAs as tissue-specific biomarkers of human health and disease." Nature Communications 2026 Apr 28;17(1):5797.
