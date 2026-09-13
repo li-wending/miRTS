@@ -141,4 +141,4 @@ Matsuura, Kentaro et al. “Circulating let-7 levels in plasma and extracellular
 
 Keller, Andreas et al., “miRNATissueAtlas2: an update to the human miRNA tissue atlas.” Nucleic acids research vol. 50,D1 (2022): D211-D221. doi:10.1093/nar/gkab808
 
-Li, Wending et al., "Circulating extracellular microRNAs as tissue-specific biomarkers of human health and disease." Nature Communications 2026 Apr 28;17(1):5797. doi:10.1038/s41467-026-72578-3
+Li, Wending et al. “Circulating extracellular microRNAs as tissue-specific biomarkers of human health and disease.” Nature Communications vol. 17,1 (2026): 5797. doi:10.1038/s41467-026-72578-3
